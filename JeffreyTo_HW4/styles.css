@@ -1,0 +1,129 @@
+/*For each of the word list divs, give them a background color, a border,
+ margins and padding.
+ul { 
+    list-style-type: none; 
+    border: black solid;
+}
+
+li { 
+    width: 80px;
+    height: 20px;
+    margin: 7px;
+    padding: 15px;
+    background-color: azure;
+    border: black solid;
+    text-align: center;
+}
+
+.set {
+    width: 500px;
+    text-align: center;
+}
+
+/*
+2. For an li, give the following:
+Give the li a fixed width and height
+Give it a background color and a border
+Give it a margin and padding
+
+3. For an ul, add 'list-style-type: none;'
+
+*/
+* {
+    text-align: center;
+}
+
+
+ul { 
+    list-style-type: none;
+    padding: 12px;  
+}
+
+li { 
+    width: 250px;
+    height: 20px;
+    margin: 7px;
+    padding: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: azure;
+    border: black solid;
+    text-align: center;
+
+    transition: background-color 0.5s ease;
+}
+
+ul li:hover {
+    background-color: hotpink;
+}
+
+#MyTitle {
+    order: 0;
+    flex-wrap: nowrap;
+    width: 100%;
+    order: 0;
+}
+
+#Adiv {
+    background-color: tomato;  
+    float: left;
+    border: black 3px solid;
+    flex:1;
+    order: 1;
+}
+
+#Bdiv {
+    background-color: deepskyblue;
+    float: inline-start;
+    border: black 3px solid;
+    flex:1;
+    order: 4
+}
+
+#Cdiv {
+    background-color: gold;
+    float: left;
+    border: black 3px solid;
+    flex:1;
+    order: 2;
+
+}
+
+#Ddiv {
+    background-color: lightgreen;
+    float: inline-start;
+    border: black 3px solid;
+    flex:1;
+    order: 3;
+
+}
+
+#MyFoot {
+    float:left;
+    font-size: 20px;
+    width: 100%;
+    order: 5;
+}
+
+body {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+@media screen and (max-width: 1920px) {
+    #Adiv { flex: 1; order: 1; }
+    #Bdiv { flex: 1; order: 4; }
+    #Cdiv { flex: 1; order: 2; }
+    #Ddiv { flex: 1; order: 3; }
+    #MyFoot {order: 5; }
+    
+}
+
+@media screen and (max-width: 945px) { /*The order for Tablet and Phone users*/
+    #Adiv { flex: 1; order: 1; }
+    #Bdiv { flex: 1; order: 2; }
+    #Cdiv { flex: 1; order: 3; }
+    #Ddiv { flex: 1; order: 4; }
+    #MyFoot {order: 5; }
+}
